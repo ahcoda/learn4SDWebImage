@@ -17,6 +17,7 @@
 		2A66E10A2170719600605105 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66E1092170719600605105 /* main.m */; };
 		2A66E1142170719700605105 /* learn4SDWebImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66E1132170719700605105 /* learn4SDWebImageTests.m */; };
 		2A66E11F2170719700605105 /* learn4SDWebImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66E11E2170719700605105 /* learn4SDWebImageUITests.m */; };
+		2AB03F1B2178784100B779B9 /* Packaging.log in Resources */ = {isa = PBXBuildFile; fileRef = 2AB03F1A2178784100B779B9 /* Packaging.log */; };
 		F734BEA1BACEF8E96A894243 /* libPods-learn4SDWebImageUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9E26C167271667580F4C7 /* libPods-learn4SDWebImageUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		2A66E11A2170719700605105 /* learn4SDWebImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = learn4SDWebImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A66E11E2170719700605105 /* learn4SDWebImageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learn4SDWebImageUITests.m; sourceTree = "<group>"; };
 		2A66E1202170719700605105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AB03F1A2178784100B779B9 /* Packaging.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Packaging.log; sourceTree = "<group>"; };
 		2DE7A18E0082C0EAC3DA0035 /* libPods-learn4SDWebImageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learn4SDWebImageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C619B067D30D931FC8ED25D /* Pods-learn4SDWebImageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn4SDWebImageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learn4SDWebImageUITests/Pods-learn4SDWebImageUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FF9E26C167271667580F4C7 /* libPods-learn4SDWebImageUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learn4SDWebImageUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				2A66E1002170719400605105 /* Main.storyboard */,
 				2A66E1032170719600605105 /* Assets.xcassets */,
 				2A66E1052170719600605105 /* LaunchScreen.storyboard */,
+				2AB03F1A2178784100B779B9 /* Packaging.log */,
 				2A66E1082170719600605105 /* Info.plist */,
 				2A66E1092170719600605105 /* main.m */,
 			);
@@ -280,6 +283,7 @@
 			files = (
 				2A66E1072170719600605105 /* LaunchScreen.storyboard in Resources */,
 				2A66E1042170719600605105 /* Assets.xcassets in Resources */,
+				2AB03F1B2178784100B779B9 /* Packaging.log in Resources */,
 				2A66E1022170719400605105 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

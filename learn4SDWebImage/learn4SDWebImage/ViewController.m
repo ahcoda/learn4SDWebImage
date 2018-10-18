@@ -7,21 +7,48 @@
 //
 
 #import "ViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #define KEY_INFO @"key_user_data"
 
-@interface ViewController ()
+@interface ViewController ()<NSCacheDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property(nonatomic, strong) NSCache *cache;
 
 @end
 
 @implementation ViewController
 
+- (NSCache *)cache
+{
+    if(_cache == nil)
+    {
+        _cache = [[NSCache alloc]init];
+    }
+    
+    return _cache;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    
+    [self loadImageView];
+    [self setupData];
 }
 
+
+-(void)setupData {
+    
+    self.cache.delegate = self;
+}
+
+- (void)loadImageView {
+
+    NSString *strUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539773685640&di=9e9b33748101297d99aa8106bb21b608&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F730e0cf3d7ca7bcb944f655cb3096b63f624a889.jpg";
+    NSURL * url = [NSURL URLWithString:strUrl];
+    [self.imageView sd_setImageWithURL:url];
+}
 
 /**
  写数据按钮响应
@@ -32,6 +59,38 @@
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:@"I am AhCoda" forKey:KEY_INFO];
+}
+
+- (IBAction)onClickWriteCacheBtn:(id)sender {
+    
+   // [self.cache setObject:@"cacheValue" forKey:@"key_cache"];
+    
+    
+    for(int i = 0;i < 100000;i++){
+        NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Packaging" ofType:@"log"]];
+        
+        // 1.缓存数据
+        [self.cache setObject:data forKey:[NSString stringWithFormat:@"image_%d",arc4random()]];
+    }
+    
+  
+}
+- (IBAction)onClickReadCacheBtn:(id)sender {
+    
+   NSData *data= [self.cache valueForKey:@"key_cache"];
+
+    NSLog(@"cacheValue = %@", data);
+}
+
+
+#pragma mark - NSCacheDelegate
+- (void)cache:(NSCache *)cache willEvictObject:(id)obj{
+    NSLog(@"删除缓存数据");
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    NSLog(@"内存警告");
 }
 
 
